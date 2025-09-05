@@ -1,9 +1,12 @@
 import TodoCard from "./TodoCard";
 
-export default function TodoList() {
+export default function TodoList(props) {
+
+  const { todos } = props;
+
   return (
     <div>
-        <TodoCard />
+        <TodoCard todos={todos} />
     </div>
   )
 }

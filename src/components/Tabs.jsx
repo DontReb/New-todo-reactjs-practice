@@ -1,4 +1,8 @@
-export default function Tabs() {
+export default function Tabs(props) {
+    const { todos } = props;
+
+    const todosLength = todos.length
+
     const tabs = ['All', 'Open', 'Completed']
 
     return (
@@ -7,7 +11,7 @@ export default function Tabs() {
             {tabs.map((tab, tabIndex) => {
                 return (
                     <button className="tab-button" key={tabIndex}>
-                        <h4>{tab} <span>(0)</span></h4>
+                        <h4>{tab} <span>({todosLength})</span></h4>
                     </button>
                 )
                 // 53:18 video

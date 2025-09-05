@@ -1,6 +1,5 @@
 export default function Header(props) {
-  const { todos } = props
-
+  const { todos } = props // unpack the properties
   const todosLength = todos.length
 
   const isTasksPlural = todos.length !== 1;

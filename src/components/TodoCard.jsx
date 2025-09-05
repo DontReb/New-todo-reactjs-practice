@@ -1,8 +1,7 @@
 export default function TodoCard(props) {
 
-  const { todoIndex, todos } = props;
+  const { todo } = props;
 
-  const todo = todos[todoIndex]
 
   return (
     <div className="card todo-item">

@@ -11,6 +11,10 @@ function App() {
     { input: "Say hi to the cat", complete: true },
   ]
 
+  const tabs = ((tab, tabIndex) => {
+    
+  })
+
 
   
   return (

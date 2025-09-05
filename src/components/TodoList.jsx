@@ -3,16 +3,20 @@ import TodoCard from "./TodoCard";
 export default function TodoList(props) {
 
   const { todos } = props
-
+  
   const tab = 'All'
-
+  const filterTodosList = tab === 'All' ? 
+    todos :
+    tab === "Completed" ?
+      todos.filter(val => val.completed) :
+      todos.filter(val => !val.completed)
+  
   return (
     <>
-        {todos.map((todo, todoIndex) => {
+        {filterTodosList.map((todo, todoIndex) => {
           return (
             <TodoCard key={todoIndex} todoIndex={todoIndex} {...props} />
           )
-          // 1:12:17 video
         })}
     </>
   )
